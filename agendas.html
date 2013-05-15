@@ -1,0 +1,30 @@
+<head>
+  <title>Web Team Agendas</title>
+  <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+
+</head>
+
+<body>
+  <div class="container">
+    {{> agenda}}
+  </div>
+</body>
+
+<template name="agenda">
+<h1>Web Team Agenda for {{date}}</h1>
+  <table>
+  {{#each items}}
+    {{> item}}
+  {{/each}}
+  </table>
+
+  {{> controls}}
+</template>
+
+<template name="item">
+  <tr>
+    <td>{{description}}</td>
+    <td>{{estimate}}</td>
+    <td>{{owner}}</td>
+  </tr>
+</template>

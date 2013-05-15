@@ -13,12 +13,18 @@
 <template name="agenda">
 <h1>Web Team Agenda for {{date}}</h1>
   <table>
+    <tr>
+      <th class="span3">Description</th>
+      <th class="span3">Estimate</th>
+      <th class="span3">Owner</th>
+      <th class="span3">&nbsp;</th>
+    </tr>
   {{#each items}}
     {{> item}}
-  {{/each}}
-  </table>
+    {{/each}}
 
-  {{> controls}}
+  {{> add}}
+  </table>
 </template>
 
 <template name="item">
@@ -26,5 +32,15 @@
     <td>{{description}}</td>
     <td>{{estimate}}</td>
     <td>{{owner}}</td>
+    <td><i class="icon-remove"></i></td>
+  </tr>
+</template>
+
+<template name="add">
+  <tr>
+    <td><input id="description"></td>
+    <td><input id="estimate"/></td>
+    <td><input id="owner"/></td>
+    <td><i class="icon-plus"></i></td>
   </tr>
 </template>

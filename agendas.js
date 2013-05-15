@@ -19,7 +19,7 @@ if (Meteor.isClient) {
     var splitEstimate = estimate.split(' ');
     var minutes = splitEstimate[0];
     var text = splitEstimate[1];
-    minutes *= 6;
+    minutes *= 3;
     return [minutes, text].join(' ');
   };
 
